@@ -26,7 +26,15 @@ int getPreference(Person woman);
 int indexOfString(string array[], string name);
 void print(Person women[]);
 
-
+/*
+ * name:      main
+ * purpose:   creates an array of Person struct pointers based on the file provided
+ *            and initiates the algorithm by calling calcMatches
+ * arguments: an int with number of arguments and an array with the arguments 
+ * returns:   an int of whether the program finished successfully 
+ * effects:   prints error if client did not provide a filename or if the file does
+ *            not exist.
+*/
 int main(int argc, char *argv[]){
 
     if (argc < 2) {
@@ -106,7 +114,7 @@ Person *read_file(string filename, string type){
 /* calcMatches
 * Input:       pointer array of male and female Person structs
 *              
-* Description: Executes Gale-Shapely algorithm with correct steps
+* Description: Executes Gale-Shapley algorithm with correct steps
 *
 * Output:      Does not return anything
 */
